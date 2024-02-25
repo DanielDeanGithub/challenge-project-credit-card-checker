@@ -28,7 +28,9 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
     of a valid credit card number and false when it is invalid. 
     This function should NOT mutate the values of the original array. */
 const validateCred  = arr => {
+    for (let i = arr.length; i > 0; i--) {
 
+    };
 };
 
 
