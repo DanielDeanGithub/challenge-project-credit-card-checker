@@ -39,7 +39,9 @@ const validateCred  = arr => {
         }
     };
 
-    return newArr;
+
+    
+    return newArr.reduce((a,b) => a + b);
 };
 
 
