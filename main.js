@@ -38,10 +38,8 @@ const validateCred  = arr => {
             newArr.unshift(arr[i]);
         }
     };
-
-
-    
-    return newArr.reduce((a,b) => a + b);
+   
+    return newArr.reduce((a,b) => a + b) % 10 === 0;
 };
 
 
