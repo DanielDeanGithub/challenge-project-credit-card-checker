@@ -32,7 +32,11 @@ const validateCred  = arr => {
     const newArr = [];
 
     for (let i = arr.length - 1; i >= 0; i--) {
-        newArr.unshift(arr[i]);
+        if (i % 2 === 0) {
+            newArr.unshift(arr[i] * 2 > 9 ? arr[i] * 2 - 9 : arr[i] * 2);
+        } else {
+            newArr.unshift(arr[i]);
+        }
     };
 
     return newArr;
