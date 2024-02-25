@@ -29,12 +29,12 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
     This function should NOT mutate the values of the original array. */
 const validateCred  = arr => {
     for (let i = arr.length; i >= 0; i--) {
-
+        console.log(arr[i]);
     };
 };
 
 
-
+validateCred(valid1);
 
 
 
