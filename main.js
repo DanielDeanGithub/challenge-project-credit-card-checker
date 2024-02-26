@@ -53,8 +53,10 @@ const findInvalidCards = arr => {
     return invalidCards;
 };
 
-const idInvalidCardCompanies = arr => {
+const idInvalidCardCompanies = arr => {    
+    for(let i = 0; i < arr.length - 1; i++) {
 
+    };
 };
 
 
@@ -63,7 +65,6 @@ const idInvalidCardCompanies = arr => {
 // console.log(validateCred(invalid1));
 // console.log(validateCred(mystery1));
 
-console.log(findInvalidCards(batch));
 
 
 
