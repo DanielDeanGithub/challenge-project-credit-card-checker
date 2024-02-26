@@ -53,6 +53,10 @@ const findInvalidCards = arr => {
     return invalidCards;
 };
 
+const idInvalidCardCompanies = arr => {
+
+};
+
 
 // console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
 // console.log(validateCred(valid1));
