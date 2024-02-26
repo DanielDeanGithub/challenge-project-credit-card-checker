@@ -88,19 +88,24 @@ const idInvalidCardCompanies = arr => {
     return companies;
 };
 
+const stringToArr = string => {
 
-console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
-console.log(validateCred([4,5,5,6,7,3,7,5,8,6,8,9,9,8,5,5]));
-console.log(validateCred(valid2));
-console.log(validateCred(invalid1));
-console.log(validateCred(mystery1));
+
+    
+}
+
+// console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
+// console.log(validateCred([4,5,5,6,7,3,7,5,8,6,8,9,9,8,5,5]));
+// console.log(validateCred(valid2));
+// console.log(validateCred(invalid1));
+// console.log(validateCred(mystery1));
 
 // const invaildCards = findInvalidCards(batch);
 // const invalidCardCompanies = idInvalidCardCompanies(invaildCards);
 
 // console.log(invalidCardCompanies);
 
-
+stringToArr('4929927375820150');
 
 
 
