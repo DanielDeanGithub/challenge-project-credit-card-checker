@@ -40,7 +40,10 @@ const batch = [
 
 // Add your functions below:
 
-const luhnAlgo = arr => {
+/*  The purpose of validateCred() is to return true when an array contains digits 
+    of a valid credit card number and false when it is invalid. 
+    This function should NOT mutate the values of the original array. */
+const validateCred = (arr) => {
     const newArr = [];
 
     for (let i = arr.length - 1; i >= 0; i--) {
@@ -50,16 +53,8 @@ const luhnAlgo = arr => {
         newArr.push(arr[i]);
       }
     }
-
-    return newArr;
-};
-
-
-/*  The purpose of validateCred() is to return true when an array contains digits 
-    of a valid credit card number and false when it is invalid. 
-    This function should NOT mutate the values of the original array. */
-const validateCred = (arr) => {
-  return luhnAlgo(arr).reduce((a, b) => a + b) % 10 === 0;
+    
+    return newArr.reduce((a, b) => a + b) % 10 === 0;
 };
 
 const findInvalidCards = (arr) => {
