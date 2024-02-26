@@ -28,17 +28,18 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
     of a valid credit card number and false when it is invalid. 
     This function should NOT mutate the values of the original array. */
 const validateCred  = arr => {
+    const lastDigit = arr[arr.length-1];
     const newArr = [];
 
-    for (let i = arr.length - 2; i >= 0; i--) {
+    for (let i = arr.length - 1; i >= 0; i--) {
         if (i % 2 === 0) {
             newArr.push(arr[i] * 2 > 9 ? arr[i] * 2 - 9 : arr[i] * 2);
         } else {
             newArr.push(arr[i]);
         }
     };
-   
-    return newArr.reduce((a,b) => a + b) % 10 === arr[arr.length-1];
+
+    return newArr.reduce((a,b) => a + b) % 10 === 0;
 };
 
 const findInvalidCards = arr => {
@@ -88,11 +89,11 @@ const idInvalidCardCompanies = arr => {
 };
 
 
-// console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
+console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
 console.log(validateCred([4,5,5,6,7,3,7,5,8,6,8,9,9,8,5,5]));
-// console.log(validateCred(valid1));
-// console.log(validateCred(invalid1));
-// console.log(validateCred(mystery1));
+console.log(validateCred(valid2));
+console.log(validateCred(invalid1));
+console.log(validateCred(mystery1));
 
 // const invaildCards = findInvalidCards(batch);
 // const invalidCardCompanies = idInvalidCardCompanies(invaildCards);
