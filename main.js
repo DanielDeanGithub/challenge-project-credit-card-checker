@@ -40,21 +40,26 @@ const batch = [
 
 // Add your functions below:
 
+const luhnAlgo = arr => {
+    const newArr = [];
+
+    for (let i = arr.length - 1; i >= 0; i--) {
+      if (i % 2 === 0) {
+        newArr.push(arr[i] * 2 > 9 ? arr[i] * 2 - 9 : arr[i] * 2);
+      } else {
+        newArr.push(arr[i]);
+      }
+    }
+
+    return newArr;
+};
+
+
 /*  The purpose of validateCred() is to return true when an array contains digits 
     of a valid credit card number and false when it is invalid. 
     This function should NOT mutate the values of the original array. */
 const validateCred = (arr) => {
-  const newArr = [];
-
-  for (let i = arr.length - 1; i >= 0; i--) {
-    if (i % 2 === 0) {
-      newArr.push(arr[i] * 2 > 9 ? arr[i] * 2 - 9 : arr[i] * 2);
-    } else {
-      newArr.push(arr[i]);
-    }
-  }
-
-  return newArr.reduce((a, b) => a + b) % 10 === 0;
+  return luhnAlgo(arr).reduce((a, b) => a + b) % 10 === 0;
 };
 
 const findInvalidCards = (arr) => {
@@ -117,7 +122,8 @@ const stringToArr = (input) => {
 };
 
 const correctInvalidCred = (arr) => {
-
+    const newArr = luhnAlgo(arr).reduce((a, b) => a + b);
+    console.log(newArr);
 };
 
 // console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
@@ -134,3 +140,4 @@ const correctInvalidCred = (arr) => {
 console.log(stringToArr("6391153068338699"));
 
 console.log(validateCred(stringToArr("6391153068338699")));
+
