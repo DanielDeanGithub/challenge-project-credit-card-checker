@@ -102,6 +102,10 @@ const stringToArr = input => {
     return outputArr; 
 }
 
+const correctInvalidCred = arr => {
+    
+}
+
 // console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
 // console.log(validateCred([4,5,5,6,7,3,7,5,8,6,8,9,9,8,5,5]));
 // console.log(validateCred(valid2));
