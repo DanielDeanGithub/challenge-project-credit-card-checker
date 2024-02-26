@@ -54,10 +54,36 @@ const findInvalidCards = arr => {
 };
 
 const idInvalidCardCompanies = arr => {  
-    const companies = [];  
-    for(let i = 0; i < arr.length - 1; i++) {
+    const companies = []; 
 
+    for(let i = 0; i < arr.length - 1; i++) {
+        switch(arr[i][0]) {
+            case 3:
+                if (companies.indexOf(3) === -1) {
+                    companies.push(3);
+                }
+                break;
+            case 4:
+                if (companies.indexOf(4) === -1) {
+                    companies.push(4);
+                }
+                break;
+            case 5:
+                if (companies.indexOf(5) === -1) {
+                    companies.push(5);
+                }
+                break;
+            case 6:
+                if (companies.indexOf(6) === -1) {
+                    companies.push(6);
+                }
+                break;  
+            default:
+                console.log('Company not found');       
+        }
     };
+
+    return companies;
 };
 
 
