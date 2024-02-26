@@ -122,8 +122,12 @@ const stringToArr = (input) => {
 };
 
 const correctInvalidCred = (arr) => {
-    const newArr = luhnAlgo(arr).reduce((a, b) => a + b);
-    console.log(newArr);
+    const newArr = arr;
+
+    for(let i = 0; i <= 9; i++) {
+        newArr[newArr.length-1] = i;
+        if (validateCred(newArr)) return newArr
+    }
 };
 
 // console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
@@ -137,7 +141,12 @@ const correctInvalidCred = (arr) => {
 
 // console.log(invalidCardCompanies);
 
-console.log(stringToArr("6391153068338699"));
+//console.log(stringToArr("6391153068338699"));
 
-console.log(validateCred(stringToArr("6391153068338699")));
+//console.log(validateCred(stringToArr("6391153068338699")));
 
+console.log(correctInvalidCred(invalid1));
+console.log(correctInvalidCred(invalid2));
+console.log(correctInvalidCred(invalid3));
+console.log(correctInvalidCred(invalid4));
+console.log(correctInvalidCred(invalid5));
