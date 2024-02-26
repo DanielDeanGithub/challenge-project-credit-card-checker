@@ -88,14 +88,18 @@ const idInvalidCardCompanies = arr => {
     return companies;
 };
 
-const stringToArr = string => {
-    if (typeof(string) !== 'string' || string.length !== 16) {
+const stringToArr = input => {
+    if (typeof(input) !== 'string' || input.length !== 16) {
         console.log('Error: please enter a 16 charater string')
     }
     
     const outputArr = [];
 
-    string.forEach(e => outputArr.push(parseInt(e)));   
+    for (const char of input) {
+        outputArr.push(parseInt(char)); 
+    }
+    
+    return outputArr; 
 }
 
 // console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
@@ -109,7 +113,7 @@ const stringToArr = string => {
 
 // console.log(invalidCardCompanies);
 
-stringToArr('4929927375820150');
+console.log(stringToArr('4929927375820150'));
 
 
 
