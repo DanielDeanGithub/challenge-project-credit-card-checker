@@ -53,7 +53,8 @@ const findInvalidCards = arr => {
     return invalidCards;
 };
 
-const idInvalidCardCompanies = arr => {    
+const idInvalidCardCompanies = arr => {  
+    const companies = [];  
     for(let i = 0; i < arr.length - 1; i++) {
 
     };
