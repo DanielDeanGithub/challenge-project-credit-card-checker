@@ -44,22 +44,22 @@ const validateCred  = arr => {
 const findInvalidCards = arr => {
     const invalidCards = [];
 
-    for(let i = 0; i < arr.length; i++) {
-        for(let j = 0; j < arr[i].length; j++) {
-            if(!validateCred(arr[i][j])) {
-                invalidCards.push(arr[i][j]);
-            }
-        };
+    for(let i = 0; i < arr.length - 1; i++) {
+        if(!validateCred(arr[i])) {
+            invalidCards.push(arr[i]);
+        }
     };
 
     return invalidCards;
 };
 
 
-console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
-console.log(validateCred(valid1));
-console.log(validateCred(invalid1));
-console.log(validateCred(mystery1));
+// console.log(validateCred([4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8]));
+// console.log(validateCred(valid1));
+// console.log(validateCred(invalid1));
+// console.log(validateCred(mystery1));
+
+console.log(findInvalidCards(batch));
 
 
 
