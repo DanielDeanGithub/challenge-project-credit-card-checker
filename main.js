@@ -113,8 +113,9 @@ const stringToArr = input => {
 
 // console.log(invalidCardCompanies);
 
-console.log(stringToArr('4929927375820150'));
+console.log(stringToArr('6391153068338699'));
 
+console.log(validateCred(stringToArr('6391153068338699')));
 
 
 
