@@ -89,8 +89,11 @@ const idInvalidCardCompanies = arr => {
 };
 
 const stringToArr = string => {
+    if (typeof(string) !== 'string' || string.length !== 16) {
+        console.log('Error: please enter a 16 charater string')
+    }
 
-
+    
     
 }
 
