@@ -56,26 +56,27 @@ const findInvalidCards = arr => {
 const idInvalidCardCompanies = arr => {  
     const companies = []; 
 
-    for(let i = 0; i < arr.length - 1; i++) {
+
+    for(let i = 0; i < arr.length - 1; i++) {   
         switch(arr[i][0]) {
             case 3:
-                if (companies.indexOf(3) === -1) {
-                    companies.push(3);
+                if (companies.indexOf('Amex (American Express)') === -1) {
+                    companies.push('Amex (American Express)');
                 }
                 break;
             case 4:
-                if (companies.indexOf(4) === -1) {
-                    companies.push(4);
+                if (companies.indexOf('Visa') === -1) {
+                    companies.push('Visa');
                 }
                 break;
             case 5:
-                if (companies.indexOf(5) === -1) {
-                    companies.push(5);
+                if (companies.indexOf('Mastercard') === -1) {
+                    companies.push('Mastercard');
                 }
                 break;
             case 6:
-                if (companies.indexOf(6) === -1) {
-                    companies.push(6);
+                if (companies.indexOf('Discover') === -1) {
+                    companies.push('Discover');
                 }
                 break;  
             default:
