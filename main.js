@@ -49,8 +49,10 @@ const findInvalidCards = arr => {
             if(!validateCred(arr[i][j])) {
                 invalidCards.push(arr[i][j]);
             }
-        }
-    }
+        };
+    };
+
+    return invalidCards;
 };
 
 
